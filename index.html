@@ -89,6 +89,19 @@
                 background-color: #e94560;
                 color: white;
             }
+            @keyframes blink {
+                0%,100%{opacity: 1;}
+                50%{opacity: 0;}
+            }
+            #cursor {
+                display: inline-block;
+                width: 3px;
+                height: 20px;
+                background-color: #e94560;
+                margin-left:4px ;
+                animation: blink 1s infinite;
+                vertical-align: middle;
+            }
         </style>
     </head>
     <body>
@@ -99,7 +112,7 @@
         </nav>
 
         <h1>Hi, I'm Aziz</h1>
-        <p>i am a CSE student learning web dovelopment.</p>
+        <p id="typed-text" style="display:inline;"></p><span id="cursor"></span>
         <div id="skills" class="skills">
             <h2>My skills</h2>
             <div class="skill-cards">
@@ -120,5 +133,18 @@
                 Visit my GitHub
             </a>
         </div>
+            <script>
+  const text = "I am a CSE student learning web development.";
+  let index = 0;
+
+  function type() {
+    if (index < text.length) {
+      document.getElementById("typed-text").innerHTML += text[index];
+      index++;
+      setTimeout(type, 50);
+    }
+  }
+  type();
+        </script>
     </body>
 </html>
