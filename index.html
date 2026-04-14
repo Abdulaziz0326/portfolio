@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>My Page</title>
+        <style>
+            @keyframes fadeIn {
+                from{
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to{
+                    opacity: 1;
+                    transform: translateY(0px);
+                } 
+            }
+            body {
+                background-color: #1a1a2e;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                padding-top: 100px;
+            }
+            h1{
+                font-size: 48px;
+                color: #e94560;
+                text-shadow: 0 0 20px #e94560;
+                animation: fadeIn 1.5s ease-in;
+            }
+            p{
+                font-size: 20px;
+                color: #a8a8b3;
+            }
+            h2{
+                color: #e94560;
+                margin-top: 60px;
+                font-size: 28px;
+                border-bottom: 2px solid #e94560;
+                display: inline-block;
+                padding-bottom: 6px;
+            }
+            div{
+                margin: 20px auto;
+                max-width: 600px;
+            }
+            nav{
+                background-color: #16213e;
+                padding: 16px;
+                position: sticky;
+                top: 0;
+            }
+            nav a{
+                color: #e94560;
+                text-decoration: none;
+                margin: 2 20px;
+                font-size: 18px;
+            }
+            nav a:hover{
+                color: white;
+            }
+            .skill-cards{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+                margin-top: 20px;             
+            }
+            .card{
+                background-color: #16213e;
+                color: #e94560;
+                padding: 12px 32px;
+                border-radius: 8px;
+                font-size: 18px;
+                border: 1px solid #e94560;
+            }
+            .card:hover{
+                background-color: #e94560;
+                color: white;
+            }
+            .contact a{
+                color: #e94560;
+                font-size: 18px;
+                text-decoration: none;
+                border: 1px solid #e94560;
+                padding: 12px 28px;
+                border-radius: 8px;
+                display: inline-block;
+                margin-top: 12px; 
+            }
+            .contact a:hover{
+                background-color: #e94560;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <h1>Hi, I'm Aziz</h1>
+        <p>i am a CSE student learning web dovelopment.</p>
+        <div id="skills" class="skills">
+            <h2>My skills</h2>
+            <div class="skill-cards">
+                <div class="card">Anime Watching</div>
+                <div class="card">HTML</div>
+                <div class="card">CSS</div>
+                <div class="card">JavaScript(learning)</div>
+                <div class="card">Git</div>
+            </div>
+        </div>
+        <div id="about" class="about">
+            <h2>About me</h2>
+            <p> I am a final year CSE student form Bangalore. I love anime and learning web dovelopment.</p>
+        </div>
+        <div id="contact" class="contact">
+            <h2>Contact</h2>
+            <a href="https://github.com/Abdulaziz0326" target="_blank">
+                Visit my GitHub
+            </a>
+        </div>
+    </body>
+</html>
